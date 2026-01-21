@@ -1,0 +1,71 @@
+# Configuration Netlify pour Boulangerie Bonotti
+# Site statique Next.js
+
+[build]
+  # Commande de build
+  command = "npm run build"
+  # Répertoire de sortie pour le site statique
+  publish = "out"
+
+[build.environment]
+  # Version de Node.js
+  NODE_VERSION = "18"
+  # Désactiver les analytics Next.js
+  NEXT_TELEMETRY_DISABLED = "1"
+
+# Redirection de www vers non-www
+[[redirects]]
+  from = "https://www.boulangerie-bonotti.fr/*"
+  to = "https://boulangerie-bonotti.fr/:splat"
+  status = 301
+  force = true
+
+# Redirection HTTP vers HTTPS
+[[redirects]]
+  from = "http://boulangerie-bonotti.fr/*"
+  to = "https://boulangerie-bonotti.fr/:splat"
+  status = 301
+  force = true
+
+# Headers de sécurité et performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Sécurité
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+    # SEO
+    X-Robots-Tag = "index, follow"
+
+# Headers pour les assets statiques (cache long)
+[[headers]]
+  for = "/asset/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Headers pour les fichiers CSS/JS
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Headers pour les images optimisées
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Page 404 personnalisée
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
