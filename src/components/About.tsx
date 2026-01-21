@@ -36,20 +36,20 @@ const About = () => {
           <div className={styles.content}>
             <span className={styles.label}>Notre Histoire</span>
             <h2 className={styles.title}>
-              Une tradition familiale,
-              <br />un savoir-faire authentique
+              Un savoir-faire passionné,
+              <br />une excellence artisanale
             </h2>
             <div className={styles.text}>
               <p>
-                Au cœur de Lumes, la Boulangerie Bonotti perpétue depuis des générations
-                l'art de la boulangerie artisanale. Chaque matin, bien avant l'aube,
+                Au cœur de Lumes, la Boulangerie Bonotti est née d'une passion commune
+                pour l'art de la boulangerie artisanale. Chaque matin, bien avant l'aube,
                 nous préparons avec soin nos pains, viennoiseries et pâtisseries.
               </p>
               <p>
-                Notre philosophie est simple : des ingrédients de qualité, des recettes
-                transmises de génération en génération, et une passion inébranlable pour
-                le travail bien fait. Nous croyons que le bon pain raconte une histoire,
-                celle de la patience, du respect des traditions et de l'amour du métier.
+                Notre philosophie est simple : des ingrédients de qualité, des techniques
+                éprouvées, et une passion inébranlable pour le travail bien fait. Nous croyons
+                que le bon pain raconte une histoire, celle de la patience, du respect des
+                traditions et de l'amour du métier.
               </p>
               <p>
                 Laurent Bonotti et son équipe vous accueillent avec le sourire pour

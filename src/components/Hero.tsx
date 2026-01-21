@@ -6,7 +6,7 @@ const Hero = () => {
     <section id="accueil" className={styles.hero}>
       <div className={styles.background}>
         <Image
-          src="/asset/Très beau background.webp"
+          src="/asset/Background 1.jpg"
           alt="Boulangerie Bonotti - Pains artisanaux"
           fill
           priority
