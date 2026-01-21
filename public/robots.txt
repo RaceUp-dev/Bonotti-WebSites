@@ -1,0 +1,12 @@
+# Robots.txt pour Boulangerie Bonotti
+# https://boulangerie-bonotti.fr
+
+User-agent: *
+Allow: /
+
+# Fichiers système
+Disallow: /_next/
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://boulangerie-bonotti.fr/sitemap.xml
