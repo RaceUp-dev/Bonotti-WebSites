@@ -228,7 +228,10 @@
 
   .phoneLink {
     position: absolute;
-    bottom: 3rem;
+    top: calc(100% + 0.35rem);
+    left: var(--container-padding);
+    right: auto;
+    bottom: auto;
   }
 
   .phoneLink span {
